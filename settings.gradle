@@ -1,0 +1,17 @@
+rootProject.name = 'Transaction-CheckList'
+
+include ':models'
+include ':in'
+include ':out'
+include ':services'
+include ':usecases'
+include ':h2Jpa'
+include ':apiRest'
+
+project(':models').projectDir = file("./domain/models")
+project(':in').projectDir = file("./domain/ports/in/in")
+project(':out').projectDir = file("./domain/ports/out/out")
+project(':services').projectDir = file("./application/services/services")
+project(':usecases').projectDir = file("./application/usecases/usecases")
+project(':h2Jpa').projectDir = file("./infrastructure/driven_adapters/h2Jpa")
+project(':apiRest').projectDir = file("./infrastructure/entry_points/apiRest")
