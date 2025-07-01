@@ -1,4 +1,4 @@
-package com.nicky.config;
+package com.nicky.beans;
 
 import com.nicky.*;
 import com.nicky.adapters.TransactionRepositoryAdapter;
@@ -13,7 +13,7 @@ public class BeansConfig {
     public UserService userService(UserRepositoryPort userRepositoryPort){
         return new UserService(
                 new RegisterUserImpl(userRepositoryPort),
-                new LoginUserImpl()
+                new LoginUserImpl(userRepositoryPort)
         );
     }
 

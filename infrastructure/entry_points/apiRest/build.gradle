@@ -40,6 +40,8 @@ dependencies {
     implementation project(':services')
     implementation project(':h2Jpa')
     implementation project(':usecases')
+    implementation project(':config')
+    implementation project(':security')
 }
 
 test {

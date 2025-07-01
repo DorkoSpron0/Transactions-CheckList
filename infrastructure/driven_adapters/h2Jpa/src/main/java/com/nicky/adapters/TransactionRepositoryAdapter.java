@@ -7,6 +7,7 @@ import com.nicky.TransactionDomain;
 import com.nicky.TransactionRepositoryPort;
 import com.nicky.repositories.TransactionRepository;
 import com.nicky.repositories.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -36,6 +37,7 @@ public class TransactionRepositoryAdapter implements TransactionRepositoryPort {
     }
 
     @Override
+    @Transactional
     public List<TransactionDomain> getTransactions(Long userId, PageRequestCustom pageRequestCustom) {
         final Pageable pageable = PageRequest.of(
                 pageRequestCustom.getPage(),

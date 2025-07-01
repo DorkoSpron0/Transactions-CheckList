@@ -24,7 +24,7 @@ public class TransactionDTO {
     private String title;
     private String description;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy HH:mm:SS", timezone = "America/Bogota")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy hh:mm:SS a", timezone = "America/Bogota")
     private LocalDateTime dateTime;
     private Long amount;
 

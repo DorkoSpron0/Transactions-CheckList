@@ -20,8 +20,14 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<UserDomain> registerUser(@RequestBody UserDomain user){
         return new ResponseEntity<>(userService.registerUser(user), HttpStatus.CREATED);
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> loginUser(@RequestBody UserDomain user){
+        return new ResponseEntity<>(userService.loginUser(user), HttpStatus.OK);
+    }
+
 }

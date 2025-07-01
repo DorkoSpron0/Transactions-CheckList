@@ -5,7 +5,9 @@ include ':in'
 include ':out'
 include ':services'
 include ':usecases'
+include ':config'
 include ':h2Jpa'
+include ':security'
 include ':apiRest'
 
 project(':models').projectDir = file("./domain/models")
@@ -15,3 +17,5 @@ project(':services').projectDir = file("./application/services/services")
 project(':usecases').projectDir = file("./application/usecases/usecases")
 project(':h2Jpa').projectDir = file("./infrastructure/driven_adapters/h2Jpa")
 project(':apiRest').projectDir = file("./infrastructure/entry_points/apiRest")
+project(':config').projectDir = file('./infrastructure/config')
+project(':security').projectDir = file('./infrastructure/security')
