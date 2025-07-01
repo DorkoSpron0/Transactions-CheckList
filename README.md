@@ -1,5 +1,5 @@
 # Transactions-CheckList
-Este proyecto está creado usando una arquitectura **hexagonal**.
+Este proyecto está creado usando una arquitectura **HEXAGONAL** o también conocida como *Puertos y adaptadores*.
 
 Además se está usando los siguientes conceptos 
 - Context-Path
@@ -11,11 +11,12 @@ Además se está usando los siguientes conceptos
 - Persistencia
 
 ## Técnologías principales
-1. Spring Boot
-2. Spring Security
-3. Jpa
-4. Jwt
-5. H2
+1. Java 21
+2. Spring Boot 3.5.3
+3. Spring Security 6
+4. Jpa
+5. Jwt
+6. H2
 
 ## Uso
 Para hacer uso primero clona el repositorio
